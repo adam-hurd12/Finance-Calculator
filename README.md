@@ -12,3 +12,8 @@ Basic text-based finance calculator to help calculate savings.
 - Python development
 - Testing, debugging, and code optimisation
 - modular programming
+
+## Author
+**Adam Hurd**  
+Aspiring Software Engineer | Independent Games Programmer  
+[LinkedIn Profile](https://www.linkedin.com/in/adam-hurd-b63753319)
