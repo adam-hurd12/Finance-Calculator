@@ -12,7 +12,7 @@ def main():
 
     today = dt.now()
     
-    is_pre_tax = inputs.string('Will you be inputting pay pre-tax or post-tax? (pre/post)', PRE + POST)
+    is_pre_tax = inputs.string('Will you be inputting pay pre-tax or post-tax? (pre/post)', constants.PRE + constants.POST)
 
     already_earnt = inputs.number(f'How much have you earnt this tax year so far, since April {today.year}?')
 

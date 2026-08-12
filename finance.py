@@ -1,3 +1,6 @@
+import constants
+
+
 # function to calculate basic tax amount; returns the amount that will be deducted
 def calc_tax(gross_pay):
     brackets = [12570, 50270, 125140]
@@ -20,22 +23,22 @@ def calc_tax(gross_pay):
 # function to total, if any, all daily expenses
 def get_expenses(frequency):
     total = 0
-    multiplier = {'daily': days_in_month, 'weekly': 4, 'monthly': 1}
+    multiplier = {'daily': constants.DAYS_IN_MONTH, 'weekly': 4, 'monthly': 1}
 
     while True:
         required = str(input(f'\nDo you have any {frequency} expenses? (y/n):   ')).lower()
 
-        if required in NO: return 0
+        if required in constants.NO: return 0
         
-        elif required in YES:
+        elif required in constants.YES:
             while True:
                 expense_name = str(input(f'\nEnter name of a {frequency} expense (q to quit):  ')).lower()
 
-                if expense_name in QUIT: return total * multiplier[frequency]
+                if expense_name in constants.QUIT: return total * multiplier[frequency]
 
                 expense_cost = get_int_input(f'\nEnter price of {frequency} expense \'{expense_name}\':   ')
 
                 total += expense_cost
 
         else:
-            print(NOT_VALID)
+            print(constants.NOT_VALID)
